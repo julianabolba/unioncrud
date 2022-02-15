@@ -1,0 +1,211 @@
+﻿@model ProjSocial.Models.Usuario;
+
+@{
+    ViewData["Title"] = "Usuarios";
+    var usuarios = ViewData["usuarios"] as List<Usuario?>;
+}
+
+
+<h1> Cadastro de Usuário </h1>
+<br />
+<div class="container" style = "width: 100%; height: 100%; align-items: center; display: block; margin: auto ">
+    <div class="row" style = "justify-content: center">
+        <div class="col-md-10">
+            <h3 style="text-align: center"> Realize abaixo o seu cadastro </h3>
+            <br />
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th> Id </th>
+                            <th> Nome </th> 
+                            <th> Cidade </th>
+                            <th> Telefone </th>
+                            <th> Orientação </th>
+                            <th> Email </th>
+                        </tr>
+                    </thead>
+               
+                    <tbody>
+                         @{
+                    foreach (var Usuario in usuarios) 
+                                {
+                            <tr>
+                                <td>@Usuario?.Id</td>
+                                <td>@Usuario?.Nome</td>
+                                <td>@Usuario?.CPF</td>
+                                <td>@Usuario?.Cidade</td>
+                                <td>@Usuario?.Telefone</td>
+                                <td>@Usuario?.DataNasc</td>
+                                <td>@Usuario?.Orientacao</td>
+                                <td>@Usuario?.Email</td>
+                            </tr>
+                        }
+                         }
+                         </tbody>
+                </table>
+                <br />
+
+                <!--Formulário para cadastro-->
+                 <form asp-controller="Usuario" asp-action="Index" style = "align-items: center ">
+                <div class="form-row" style="justify-content: center">
+
+                    <div class="input-group mb-6">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
+                     <input asp-for="Nome" type="text" class="form-control" id="" placeholder="João Silva" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+
+                    <br /> 
+                   <div class="input-group mb-6">
+                     <span class="input-group-text" id="inputGroup-sizing-default">CPF</span>
+                        <input asp-for="CPF" type="text"class="form-control" placeholder="000.000.000-00" />
+                        </div>
+                           <br /> 
+                    <div class="input-group mb-6">
+                     <span class="input-group-text" id="inputGroup-sizing-default">Data de nascimento</span>
+                        <input asp-for="DataNasc" type="date" class="form-control" id="" placeholder="" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                       <br /> 
+
+                     <div class="input-group mb-6">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Cidade</span>
+                        <input asp-for="Cidade" type="text" class="form-control" id="" placeholder="Rio Claro - SP" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                       <br /> 
+                    
+                     <div class="input-group mb-6">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Orientação</span>
+                        <input asp-for="Orientacao" type="text" class="form-control" id="" placeholder="Bissexual" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                       <br /> 
+
+                    <div class="input-group mb-6">
+                     <span class="input-group-text" id="inputGroup-sizing-default">Telefone</span>
+                        <input asp-for="Telefone" type="text" class="form-control" id="" placeholder="(11)999999999" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                       <br /> 
+
+                    <div class="input-group mb-6">
+                     <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                        <input asp-for="Email" type="text" class="form-control" id="" placeholder="joaosilva@gmail.com" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                       <br /> 
+
+                    <div class="input-group mb-6">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Senha</span>
+                        <input asp-for="Senha" type="password" class="form-control" id="" placeholder= aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                       <br /> 
+                   </div>
+                      <br /> 
+
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="submit" class="btn btn-success btn-lg" style="justify-content-md-end"> Cadastrar </button>
+                    </div>
+             </form>
+
+             <h3> Para atualizar seus dados </h3>
+             <hr />
+             <br />
+
+             <form asp-controller="Usuario" asp-action="Index" style = "align-items: center ">
+
+                     <div class="form-row" style="justify-content: center">
+                <div class="input-group mb-6">
+                    <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01"> Id </label>
+                    </div>
+                <select name="Registro" class="form-select form-select mb-6" aria-label="">
+                     <option selected> Localize o id cadastrado </option>
+                    @{
+                        foreach(var Usuario in usuarios)
+                        {
+                            <option value=@Usuario.Id>@Usuario.Id</option>
+                        }
+                    }
+                </select>
+                </div>
+                <br />
+                    <div class="input-group mb-6">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
+                     <input asp-for="Nome" type="text" class="form-control" id="" placeholder="João Silva" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+
+                    <br /> 
+                   <div class="input-group mb-6">
+                     <span class="input-group-text" id="inputGroup-sizing-default">CPF</span>
+                         <input asp-for="CPF" type="text"class="form-control" placeholder="000.000.000-00" />
+                        </div>
+                           <br /> 
+                    <div class="input-group mb-6">
+                     <span class="input-group-text" id="inputGroup-sizing-default">Data de nascimento</span>
+                        <input asp-for="DataNasc" type="date" class="form-control" id="" placeholder="" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                       <br /> 
+
+                     <div class="input-group mb-6">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Cidade</span>
+                        <input asp-for="Cidade" type="text" class="form-control" id="" placeholder="Rio Claro - SP" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                       <br /> 
+                    
+                     <div class="input-group mb-6">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Orientação</span>
+                        <input asp-for="Orientacao" type="text" class="form-control" id="" placeholder="Bissexual" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                       <br /> 
+
+                    <div class="input-group mb-6">
+                     <span class="input-group-text" id="inputGroup-sizing-default">Telefone</span>
+                        <input asp-for="Telefone" type="text" class="form-control" id="" placeholder="(11)999999999" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                       <br /> 
+
+                    <div class="input-group mb-6">
+                     <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                        <input asp-for="Email" type="text" class="form-control" id="" placeholder="joaosilva@gmail.com" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                       <br /> 
+
+                    <div class="input-group mb-6">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Senha</span>
+                        <input asp-for="Senha" type="password" class="form-control" id="" placeholder= aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                       <br /> 
+ 
+                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                          <button type="button" class="btn btn-primary btn-lg">Atualizar</button></div>
+                 
+                    </div>
+
+
+            </form>
+
+
+            <h3>Para deletar seu cadastro</h3>
+            <hr />
+            <br />
+            <form asp-controller="usuario" form asp-action="Deletar">
+                <div class="form-row" style="justify-content: center">
+                <div class="input-group mb-6">
+                    <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01"> Deletar </label>
+                    </div>
+                <select name="Registro" class="form-select form-select mb-6" aria-label="">
+                     <option selected> Localize o Id cadastrado </option>
+                    @{
+                        foreach(var Usuario in usuarios)
+                        {
+                            <option value=@Usuario.Id>@Usuario.Id</option>
+                        }
+                    }
+                </select>
+                </div>
+                 <br />
+                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-danger btn-lg"> Deletar </button> </div>
+            </div> 
+            </form>
+            <br />
+        </div>
+    </div>
+</div>
