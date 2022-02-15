@@ -1867,11 +1867,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Remakker\\Documents\\ProjSocial\\ProjSocial\\ProjSocial.csproj",
+      "projectUniqueName": "C:\\Users\\Remakker\\Source\\Repos\\julianabolba\\unioncrud\\ProjSocial.csproj",
       "projectName": "ProjSocial",
-      "projectPath": "C:\\Users\\Remakker\\Documents\\ProjSocial\\ProjSocial\\ProjSocial.csproj",
+      "projectPath": "C:\\Users\\Remakker\\Source\\Repos\\julianabolba\\unioncrud\\ProjSocial.csproj",
       "packagesPath": "C:\\Users\\Remakker\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Remakker\\Documents\\ProjSocial\\ProjSocial\\obj\\",
+      "outputPath": "C:\\Users\\Remakker\\Source\\Repos\\julianabolba\\unioncrud\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

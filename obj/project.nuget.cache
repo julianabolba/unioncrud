@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kkyx/IbqLClWDrRJXajOHIZ9jdfuX9bjQCpWVKZlfLCnMIIB9cNNmlNgKzF+ug1YPCnRTOLJ/6Gt6ad/bOZD1w==",
+  "dgSpecHash": "ufJhOCNTMIXgGlf5FbZEr5vQWZXldivZb+fcK+jF99s/QsufZT6Oo36iS0igUOqkhIEHmYbEYtroUU4iG1YXpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Remakker\\Documents\\ProjSocial\\ProjSocial\\ProjSocial.csproj",
+  "projectFilePath": "C:\\Users\\Remakker\\Source\\Repos\\julianabolba\\unioncrud\\ProjSocial.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Remakker\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Remakker\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
